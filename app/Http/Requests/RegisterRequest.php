@@ -22,7 +22,7 @@ class RegisterRequest extends FormRequest
     {
         return [
             'username'      => 'required|string|between:3,30|unique:users',
-            'mobile_number' => 'required|string|unique:users|regex:/^\+[1-9]\d{1,14}$/',
+            'mobile_number' => 'required|string|unique:users|regex:/^\+\d{12}$/',
             'password'      => 'required|string|min:8',
             'latitude'      => 'required|numeric|between:-90,90',
             'longitude'     => 'required|numeric|between:-180,180',

@@ -22,7 +22,7 @@ class VerifyMobileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'mobile_number'     => 'required|string|exists:users,mobile_number',
+            'mobile_number'     => 'required|string|regex:/^\+\d{12}$/|exists:users,mobile_number',
             'verification_code' => 'required|string|size:6',
         ];
     }
