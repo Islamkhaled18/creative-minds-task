@@ -45,6 +45,7 @@ class AuthController extends Controller
                 'latitude'                     => $request->latitude,
                 'longitude'                    => $request->longitude,
                 'location_name'                => $request->location_name,
+                'user_type'                    => $request->user_type ?? 'user',
             ]);
 
             if ($user) {

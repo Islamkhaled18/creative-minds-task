@@ -28,6 +28,7 @@ class RegisterRequest extends FormRequest
             'longitude'     => 'required|numeric|between:-180,180',
             'location_name' => 'required|string|max:255',
             'profile_image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'user_type'     => 'nullable|string|in:user,delivery',
         ];
     }
 }
